@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+	<h1>야호</h1>
+
+<!-- 진자 템플릿에서도 [0:4] 같은 스플릿을 지원한다. 편리하게 이용 가능함. -->
+	<p>{{ name }}님 안녕하세요. 긴 이름입니다.</p> 
+	<p>{{ short_name }}님 안녕하세요.</p>
+	<div>
+		<ul>
+			{% for fruit in fruits %}
+				<li>{{ fruits }} - {{ fruit }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+<hr>
+{% if name == "오재중" %}
+	<h2>안녕하세요 오재중님</h2>
+{% elif name == "박진수" %}
+	<h2>하이용</h2>
+{% else %}
+	<h2>누구신가요</h2>
+{% endif %}
+</body>
+</html>
